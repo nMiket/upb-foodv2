@@ -30,6 +30,7 @@ import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
+import androidx.compose.ui.unit.dp
 import com.upbmovil.components.CafeteriaCard
 import com.upbmovil.components.UPBBottomBar
 import com.upbmovil.models.Cafeteria
