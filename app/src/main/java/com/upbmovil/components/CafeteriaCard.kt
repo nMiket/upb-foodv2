@@ -43,6 +43,16 @@ private data class BadgeStyle(
     val textColor: Color
 )
 
+private val cardBackgroundColor = Color.White
+private val imagePlaceholderColor = Color(0xFFE2E2E2)
+private val primaryTextColor = Color(0xFF1A1C1C)
+private val secondaryTextColor = Color(0xFF757685)
+private val openBadgeBackground = Color(0xFFE9F3C8)
+private val openBadgeBorder = Color(0xFFB3D420).copy(alpha = 0.35f)
+private val openBadgeTextColor = Color(0xFF7A9500)
+private val highDemandBadgeBackground = Color(0xFFFFDAD6)
+private val highDemandBadgeTextColor = Color(0xFF93000A)
+
 @Composable
 fun CafeteriaCard(
     cafeteria: Cafeteria,
@@ -51,15 +61,15 @@ fun CafeteriaCard(
     val (badgeText, badgeBackground, badgeBorder, badgeTextColor) = when (cafeteria.status) {
         CafeteriaStatus.OPEN -> BadgeStyle(
             text = "Abierto",
-            background = Color(0xFFE9F3C8),
-            border = Color(0xFFB3D420).copy(alpha = 0.35f),
-            textColor = Color(0xFF7A9500)
+            background = openBadgeBackground,
+            border = openBadgeBorder,
+            textColor = openBadgeTextColor
         )
         CafeteriaStatus.HIGH_DEMAND -> BadgeStyle(
             text = "Alta demanda",
-            background = Color(0xFFFFDAD6),
+            background = highDemandBadgeBackground,
             border = Color.Transparent,
-            textColor = Color(0xFF93000A)
+            textColor = highDemandBadgeTextColor
         )
     }
 
@@ -68,7 +78,7 @@ fun CafeteriaCard(
             .fillMaxWidth()
             .animateContentSize(),
         shape = RoundedCornerShape(16.dp),
-        colors = CardDefaults.cardColors(containerColor = Color.White),
+        colors = CardDefaults.cardColors(containerColor = cardBackgroundColor),
         elevation = CardDefaults.cardElevation(defaultElevation = 4.dp)
     ) {
         Row(
@@ -93,7 +103,7 @@ fun CafeteriaCard(
                     modifier = Modifier
                         .size(80.dp)
                         .clip(imageShape)
-                        .background(Color(0xFFE2E2E2)),
+                        .background(imagePlaceholderColor),
                     contentAlignment = Alignment.Center
                 ) {
                     Icon(
@@ -115,7 +125,7 @@ fun CafeteriaCard(
                         text = cafeteria.name,
                         style = MaterialTheme.typography.titleSmall,
                         fontWeight = FontWeight.Bold,
-                        color = Color(0xFF1A1C1C),
+                        color = primaryTextColor,
                         modifier = Modifier.weight(1f)
                     )
                     Box(
@@ -144,14 +154,14 @@ fun CafeteriaCard(
                     Icon(
                         imageVector = Icons.Filled.LocationOn,
                         contentDescription = null,
-                        tint = Color(0xFF757685),
+                        tint = secondaryTextColor,
                         modifier = Modifier.size(16.dp)
                     )
                     Spacer(modifier = Modifier.size(4.dp))
                     Text(
                         text = cafeteria.location,
                         style = MaterialTheme.typography.bodySmall,
-                        color = Color(0xFF757685)
+                        color = secondaryTextColor
                     )
                 }
                 Spacer(modifier = Modifier.height(8.dp))

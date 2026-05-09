@@ -37,20 +37,25 @@ import com.upbmovil.models.Cafeteria
 import com.upbmovil.models.CafeteriaStatus
 import com.upbmovil.ui.theme.UPBMovilTheme
 
+private const val CafeCentralImageUrl =
+    "https://lh3.googleusercontent.com/aida-public/AB6AXuBCKIee2MrK4SgLDxzmzcQMcnIkWb1Gw9qpPBq-sL-VODZ27Z2u1ZNkBqjLW66lwDGK_0hq73uP4m0VBJ8IH2mxGXgOhX1O3nWQBKBBrKztgXCDQCgQz8kEIOAswlAEXcn3SXHMgon3_6rKlAjKhiXZEvVRlkpXK0fN5kHEWRSekbnDjPT0SQ3tccnVlvxrf8uAgDDVmnA9Lc52ana6xF8F7d9L-O_bqUtGpksJYincDAnZ1n7fbsZFXYSTwfjXjNWZEM94fX7Eix8"
+private const val RestauranteBienestarImageUrl =
+    "https://lh3.googleusercontent.com/aida-public/AB6AXuC5fVoUpF8P2zRjJxxsFrfm_xZ59t45Gp2peDqvb7XycizGnO4srWYu8rWfqxQGutp4-jdap_fugi6mWs1uC301NRT3Si_CP9fjW90QKsOdkXVxCAiXEGlk3oX-0H6T32zq_B642jnm2DoMTpUsDVhLsCVUSpGjdLMivyk9gXFCdc6gvV5X886VDHWCBfp5j9eSWddx5ba9f9LQZqzYy_0aTnzvBYhJCnXyefBi1aP7SvlZuzgZ1amyKH_OzYgHMz6N4j8UryvkwZU"
+
 private val cafeterias = listOf(
     Cafeteria(
         "Café Central",
         "Bloque 11",
         CafeteriaStatus.HIGH_DEMAND,
         15,
-        "https://lh3.googleusercontent.com/aida-public/AB6AXuBCKIee2MrK4SgLDxzmzcQMcnIkWb1Gw9qpPBq-sL-VODZ27Z2u1ZNkBqjLW66lwDGK_0hq73uP4m0VBJ8IH2mxGXgOhX1O3nWQBKBBrKztgXCDQCgQz8kEIOAswlAEXcn3SXHMgon3_6rKlAjKhiXZEvVRlkpXK0fN5kHEWRSekbnDjPT0SQ3tccnVlvxrf8uAgDDVmnA9Lc52ana6xF8F7d9L-O_bqUtGpksJYincDAnZ1n7fbsZFXYSTwfjXjNWZEM94fX7Eix8"
+        CafeCentralImageUrl
     ),
     Cafeteria(
         "Restaurante Bienestar",
         "Bloque 9",
         CafeteriaStatus.OPEN,
         5,
-        "https://lh3.googleusercontent.com/aida-public/AB6AXuC5fVoUpF8P2zRjJxxsFrfm_xZ59t45Gp2peDqvb7XycizGnO4srWYu8rWfqxQGutp4-jdap_fugi6mWs1uC301NRT3Si_CP9fjW90QKsOdkXVxCAiXEGlk3oX-0H6T32zq_B642jnm2DoMTpUsDVhLsCVUSpGjdLMivyk9gXFCdc6gvV5X886VDHWCBfp5j9eSWddx5ba9f9LQZqzYy_0aTnzvBYhJCnXyefBi1aP7SvlZuzgZ1amyKH_OzYgHMz6N4j8UryvkwZU"
+        RestauranteBienestarImageUrl
     ),
     Cafeteria("Snack Bar", "Bloque 7", CafeteriaStatus.OPEN, 2, null)
 )
