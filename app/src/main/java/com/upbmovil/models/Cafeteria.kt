@@ -9,5 +9,6 @@ data class Cafeteria(
     val name: String,
     val location: String,
     val status: CafeteriaStatus,
-    val estimatedTimeMinutes: Int
+    val estimatedTimeMinutes: Int,
+    val imageUrl: String?
 )
