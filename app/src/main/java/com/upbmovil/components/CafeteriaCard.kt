@@ -187,6 +187,8 @@ fun CafeteriaCard(
     }
 }
 
+}
+
 @Preview(showBackground = true)
 @Composable
 private fun CafeteriaCardPreview() {
